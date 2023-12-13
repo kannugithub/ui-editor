@@ -1,0 +1,104 @@
+
+
+body{
+    font-family: 'Source Sans 3', sans-serif !important;
+    text-transform: capitalize !important;
+    // background-color: black;
+    // overflow-y: hidden;
+    // overflow-x: hidden;
+  }
+
+//breakpoints
+$breakpoint_xxl: 'max-width:1700px';
+$breckpoint_XXL: 'max-width: 1400px';
+$breckpoint_XL: 'max-width: 1200px';
+$breckpoint_LG: 'max-width: 992px';
+$breckpoint_MD: 'max-width: 768px';
+$breckpoint_SM: 'max-width: 576px';
+$breckpoint_ESM: 'max-width: 385px';
+$breckpoint_340: 'max-width: 355px';
+
+
+.coustom_container{
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 100px;
+  
+    @media ($breckpoint_XL) {
+        padding: 0 70px;
+    }
+  
+    @media ($breckpoint_LG) {
+        padding: 0 30px;
+    }
+  
+    @media ($breckpoint_MD) {
+        padding: 0 18px;
+    }
+  
+    @media ($breckpoint_SM) {
+        padding: 0 15px;
+    }
+  }
+
+
+  p, h1, h2, h3, h4, ul{
+
+    margin-bottom: 0px;
+  }
+
+  .main-sec{
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    .leftside{
+      flex-basis: 20%;
+    }
+
+    .rightside{
+      flex-basis: 80%;
+    }
+  }
+
+  .canvas-container {
+    position: relative;
+  }
+  
+  .drawing-canvas {
+    border: 1px solid #000;
+    cursor: crosshair;
+  }
+
+  #main {
+    position: relative;
+  
+    #openBtn {
+      font-size: 30px;
+      cursor: pointer;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+    }
+  
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+  
+    .visible {
+      display: block;
+    }
+  }
+  
+
+  ul{
+
+    list-style: none;
+    padding: 0;
+  }

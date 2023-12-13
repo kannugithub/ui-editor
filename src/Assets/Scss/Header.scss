@@ -1,0 +1,32 @@
+.main-header{
+    background-color: #292448;
+    .inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px;
+        .left-sec{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            img{
+                width: 40px;
+                border-radius: 50px;
+            }
+
+            .title{
+                color: white;
+                text-transform:capitalize;
+            }
+        }
+
+        .right-sec{
+            img{
+
+                width: 40px;
+            }
+        }
+
+    }
+}

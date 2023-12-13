@@ -1,0 +1,41 @@
+.tools-sec{
+    position: relative;
+    z-index: 1;
+    .inner-tools{
+
+        position: absolute;
+        background-color: black;
+        width: 250px;
+        padding: 10px;
+        
+        .title-sec{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .shape-tools{
+
+            .inner{
+
+                .list{
+                    display: flex;
+                    justify-content: space-around;
+                    list-style: none;
+                    gap: 15px;
+
+                    li{
+                        background-color: red;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                .list2{
+
+                    display: flex;
+                }
+            }
+        }
+    }
+}
