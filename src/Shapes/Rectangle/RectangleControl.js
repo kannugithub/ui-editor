@@ -1,6 +1,8 @@
+// RectangleControl.jsx
 import React, { useState, useEffect } from "react";
+import ShapeSidebar from "../ShapeSidebar";
 import Rectangle from "../Rectangle/Rectangle";
-import {Crop54} from "@mui/icons-material";
+import CreateShapeControls from "../CreateShapeControls"; // Update the path
 
 const RectangleControl = () => {
   const [rectangles, setRectangles] = useState([]);
@@ -20,13 +22,12 @@ const RectangleControl = () => {
   };
 
   const handleToggleCreateShape = () => {
+    console.log("handleToggleCreateShape in RectangleControl");
     if (isCreatingShape) {
-      // If currently creating shapes, clear them
       setRectangles([]);
       setIsCreatingShape(false);
       localStorage.clear();
     } else {
-      // If not creating shapes, start creating
       setIsCreatingShape(true);
       localStorage.setItem("isCreatingShape", JSON.stringify(true));
     }
@@ -34,12 +35,10 @@ const RectangleControl = () => {
 
   return (
     <div>
-      <button onClick={handleToggleCreateShape}>
-        {isCreatingShape ? "Clear Shapes" : <Crop54 />}
-      </button>
-      {isCreatingShape && (
-        <p>Click on the canvas to start drawing rectangles...</p>
-      )}
+      <CreateShapeControls
+        isCreatingShape={isCreatingShape}
+        onToggleCreateShape={handleToggleCreateShape}
+      />
       <Rectangle
         rectangles={rectangles}
         setRectangles={handleShapeCreated}

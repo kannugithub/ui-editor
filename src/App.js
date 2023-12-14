@@ -7,7 +7,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import RectangleControl from "./Shapes/Rectangle/RectangleControl";
-import DraggableTextEditor from "./Shapes/Rectangle/TextEditor/DraggableTextEditor";
+import DraggableTextEditor from "./Shapes/TextEditor/DraggableTextEditor";
 import LeftSidebar from "./Components/LeftSidebar";
 import Home from "./Components/Home"
 import AboutUs from "./Components/AboutUs"
@@ -24,15 +24,16 @@ import RightSidebar from "./Components/RightSidebar";
 function App() {
 
   const LeftSidebarRoute = () =>{
-
+    
     return(
       <>
       <div className="main-sec">
       <div className="leftside">
        <LeftSidebar />
        </div>
-       <div className="middleside">
+       <div className="middleside" style={{color: "white"}}>
         <Outlet />
+        {/* <DraggableTextEditor /> */}
         <RectangleControl />
        </div>
        <div className="rightside">

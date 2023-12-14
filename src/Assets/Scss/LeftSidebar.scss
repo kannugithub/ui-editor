@@ -18,9 +18,21 @@
             display: flex;
             gap: 5px;
 
+            span{
+                cursor: pointer;
+            }
+
             svg{
 
                 width: 20px;
+                cursor: pointer;
+                
+
+                &:hover{
+
+                    background-color: rgba(0, 0, 0, 0.268);
+                    border-radius: 30px;
+                }
             }
 
 

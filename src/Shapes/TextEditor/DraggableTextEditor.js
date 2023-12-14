@@ -11,7 +11,7 @@ const DraggableTextEditor = () => {
   return (
     <Draggable>
       <div
-        style={{padding: "10px", width: "300px", position: "relative", zIndex: "1" }}
+        style={{width: "300px", position: "relative", zIndex: "1" }}
       >
         <input
           value={text}
@@ -20,7 +20,7 @@ const DraggableTextEditor = () => {
           style={{ width: "100%", resize: "none" }}
         />
         <div>
-          <pre>{text}</pre>
+          <pre style={{color: "white", fontSize: "14px"}}>{text}</pre>
         </div>
       </div>
     </Draggable>
