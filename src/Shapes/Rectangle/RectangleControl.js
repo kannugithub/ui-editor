@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from "react";
 import ShapeSidebar from "../ShapeSidebar";
 import Rectangle from "../Rectangle/Rectangle";
-import CreateShapeControls from "../CreateShapeControls"; // Update the path
+
+import { Cancel, Crop54 } from "@mui/icons-material";
+// import DraggableTextEditor from "../TextEditor/DraggableTextEditor";
 
 const RectangleControl = () => {
   const [rectangles, setRectangles] = useState([]);
@@ -35,10 +37,20 @@ const RectangleControl = () => {
 
   return (
     <div>
-      <CreateShapeControls
-        isCreatingShape={isCreatingShape}
-        onToggleCreateShape={handleToggleCreateShape}
-      />
+      <div style={{ display: "flex", marginTop: "15px", gap: "5px" }}>
+        <div>
+          <button onClick={handleToggleCreateShape}>
+            {isCreatingShape ? <Cancel /> : <Crop54 />}
+          </button>
+          {isCreatingShape && (
+            <p style={{ color: "white", fontSize: "14px", padding: "15px 0" }}>
+              Click on the canvas to start drawing rectangles...
+            </p>
+          )}
+        </div>
+        <div></div>
+        {/* <DraggableTextEditor /> */}
+      </div>
       <Rectangle
         rectangles={rectangles}
         setRectangles={handleShapeCreated}

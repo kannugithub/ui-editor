@@ -33,7 +33,7 @@ function App() {
        </div>
        <div className="middleside" style={{color: "white"}}>
         <Outlet />
-        {/* <DraggableTextEditor /> */}
+        <DraggableTextEditor />
         <RectangleControl />
        </div>
        <div className="rightside">

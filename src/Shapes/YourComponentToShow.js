@@ -2,9 +2,15 @@
 import React, { useEffect, useState } from "react";
 import { Close, Crop54, CropDin, Title } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import CreateShapeControls from "./CreateShapeControls"; // Update the path
+
 
 const YourComponentToShow = ({ onCloseClick, handleToggleCreateShape, isCreatingShape  }) => {
+
+    const handleClick = () => {
+        console.log("handleToggleCreateShape is called");
+        handleToggleCreateShape();
+      };
+
   return (
     <div className="tools-sec">
       <div className="inner-tools">
@@ -15,10 +21,6 @@ const YourComponentToShow = ({ onCloseClick, handleToggleCreateShape, isCreating
           </span>
         </div>
         <div className="shape-tools">
-          {/* <CreateShapeControls
-            {...isCreatingShape ? "Clear Shapes" : <Crop54 />}
-            onToggleCreateShape={handleToggleCreateShape}
-          /> */}
           <div className="inner">
             <ul className="list">
               <li>Bits</li>
@@ -26,7 +28,7 @@ const YourComponentToShow = ({ onCloseClick, handleToggleCreateShape, isCreating
             </ul>
             <ul className="list2">
               <li>
-                <Link onClick={handleToggleCreateShape}>
+                <Link onClick={handleClick}>
                   <CropDin />
                   Rectangle
                 </Link>

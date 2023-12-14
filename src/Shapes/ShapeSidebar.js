@@ -4,7 +4,10 @@ import { AddCircle } from "@mui/icons-material";
 import YourComponentToShow from "./YourComponentToShow";
 
 const ShapeSidebar = () => {
-  const [isComponentVisible, setIsComponentVisible] = useState(false);
+  const [isComponentVisible, setIsComponentVisible] = useState
+  (false);
+
+  const [isCreatingShape, setIsCreatingShape] = useState(false);
 
   const toggleVisibility = () => {
     setIsComponentVisible(!isComponentVisible);
