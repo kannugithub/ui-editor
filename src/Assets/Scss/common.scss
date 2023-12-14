@@ -3,9 +3,9 @@
 body{
     font-family: 'Source Sans 3', sans-serif !important;
     text-transform: capitalize !important;
-    // background-color: black;
-    // overflow-y: hidden;
-    // overflow-x: hidden;
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
 
 //breakpoints
@@ -56,8 +56,13 @@ $breckpoint_340: 'max-width: 355px';
       flex-basis: 20%;
     }
 
+    .middleside{
+      flex-basis: 60%;
+    }
+
     .rightside{
-      flex-basis: 80%;
+      flex-basis: 20%;
+      // background-color: #433f5e;
     }
   }
 
@@ -102,3 +107,5 @@ $breckpoint_340: 'max-width: 355px';
     list-style: none;
     padding: 0;
   }
+
+  

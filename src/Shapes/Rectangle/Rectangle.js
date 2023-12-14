@@ -87,10 +87,13 @@ const Rectangle = ({ isCreatingShape, onShapeCreated }) => {
 
   return (
     <div>
-      <button onClick={handleSave}>Save</button>
+      {
+        isCreatingShape ? <button onClick={handleSave}>Save</button> 
+        : null
+      }
       <Stage
-        width={1000}
-        height={600}
+        width={700}
+        height={500}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}

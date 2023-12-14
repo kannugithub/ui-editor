@@ -1,26 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Replay, AddCircle } from "@mui/icons-material";
-import RectangleDrawer from "../Shapes/Rectangle";
-import DrawingButton from "../Shapes/DrawingButton";
+
 import ShapeSidebar from "../Shapes/ShapeSidebar";
 
-const LeftSidebar = ({ onStartDrawing, onStopDrawing }) => {
-
-  const [isComponentVisible, setIsComponentVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    setIsComponentVisible(!isComponentVisible );
-  };
-  //   const [drawingActive, setDrawingActive] = useState(false);
-
-  //   const handleStartDrawing = () => {
-  //     setDrawingActive(true);
-  //   };
-
-  //   const handleStopDrawing = () => {
-  //     setDrawingActive(false);
-  //   };
+const LeftSidebar = () => {
 
   return (
     <>

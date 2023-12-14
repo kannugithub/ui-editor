@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Close, AddCircle, CropDin, Title } from "@mui/icons-material";
-import { useDrawing } from "../ContextWrapper/DrawingContext";
-import CanvasWithText from "./CanvasWithText";
+// import { useDrawing } from "../ContextWrapper/DrawingContext";
+// import CanvasWithText from "./CanvasWithText";
 import { Link } from "react-router-dom";
 
 const ShapeSidebar = () => {
@@ -23,10 +23,10 @@ const ShapeSidebar = () => {
   );
 };
 
-export const YourComponentToShow = ({ onCloseClick }) => {
+export const YourComponentToShow = ({ onCloseClick, onToggleCreateShape }) => {
   const [rectangles, setRectangles] = useState([]);
   const [isCreatingShape, setIsCreatingShape] = useState(false);
-  
+
   useEffect(() => {
     const storedIsCreatingShape = localStorage.getItem("isCreatingShape");
     if (storedIsCreatingShape) {
@@ -53,40 +53,41 @@ export const YourComponentToShow = ({ onCloseClick }) => {
       localStorage.setItem("isCreatingShape", JSON.stringify(true));
     }
   };
-  
-    return (
-      <div className="tools-sec">
-        <div className="inner-tools">
-          <div className="title-sec">
-            <span>Add Components</span>
-            <span>
-              <Close onClick={onCloseClick} />
-            </span>
-          </div>
-          <div className="shape-tools">
-            <div className="inner">
-              <ul className="list">
-                <li>Bits</li>
-                <li>Blocks</li>
-              </ul>
-              <ul className="list2">
-                <li>
-                    <Link onClick={handleToggleCreateShape} >
-                    
-                  Rectangle
+
+  return (
+    <div className="tools-sec">
+      <div className="inner-tools">
+        <div className="title-sec">
+          <span>Add Components</span>
+          <span>
+            <Close onClick={onCloseClick} />
+          </span>
+        </div>
+        <div className="shape-tools">
+          <div className="inner">
+            <ul className="list">
+              <li>Bits</li>
+              <li>Blocks</li>
+            </ul>
+            <ul className="list2">
+              <li>
+                <Link onClick={handleToggleCreateShape}>
                   <CropDin />
-                  </Link>
-                </li>
-                <li>
+                  Rectangle
+                </Link>
+              </li>
+              <li>
+                <Link>
+                  <Title />
                   Text
-                  <Title/>
-                </li>
-              </ul>
-            </div>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 export default ShapeSidebar;
